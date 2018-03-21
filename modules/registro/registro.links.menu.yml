@@ -1,0 +1,6 @@
+registro.list:
+  title: REGISTRO
+  description: 'REGISTRO List'
+  parent: main
+  route_name: registro-list
+  menu_name: main

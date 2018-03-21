@@ -1,0 +1,13 @@
+blog.list:
+  title: BLOG
+  description: 'BLOG List'
+  parent: main
+  route_name: blogList
+  menu_name: main 
+
+#faq.admin:
+#  title: FAQ
+#  description: 'FAQ admin'
+#  parent: account
+#  route_name: faqList
+#  menu_name: account 

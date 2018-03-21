@@ -1,0 +1,38 @@
+registro-list:
+    path: /registro
+    defaults:
+        _controller: Drupal\registro\Controller\RegistroController::lista
+    requirements:
+        _permission: 'access content'
+
+registroAdd:
+    path: /registroAdd
+    defaults:
+        _form: 'Drupal\registro\Form\RegistroAddForm'
+        _title: "Registro Participante"
+    requirements:
+        _permission: 'access content'
+
+registroRead:
+    path: /registroRead/{id}
+    defaults:
+        _form: 'Drupal\registro\Form\RegistroReadForm'
+        _title: "Lectura Participante"
+    requirements:
+        _permission: 'access content'
+
+registroUpdate:
+    path: /registroUpdate/{id}
+    defaults:
+        _form: 'Drupal\registro\Form\RegistroUpdateForm'
+        _title: "Lectura Participante"
+    requirements:
+        _permission: 'registro update'
+
+registroDelete:
+    path: /registroDelete/{id}
+    defaults:
+        _form: 'Drupal\registro\Form\RegistroDeleteForm'
+        _title: "Eliminar participante"
+    requirements:
+        _permission: 'registro delete'

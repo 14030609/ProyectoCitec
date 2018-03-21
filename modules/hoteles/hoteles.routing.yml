@@ -1,0 +1,55 @@
+hotelesList:
+  path: /hoteles/list
+  defaults:
+      _controller: Drupal\hoteles\Controller\HotelesController::lista
+  requirements:
+      _permission: 'hoteles read'
+      #_user_is_logged_in: 'FALSE'
+
+hotelesList2:
+  path: /hoteles/list2
+  defaults:
+      _controller: Drupal\hoteles\Controller\HotelesController::lista2
+  requirements:
+      _permission: 'hoteles read'
+      #_user_is_logged_in: 'FALSE'
+
+hotelesAdd:
+  path: /hoteles/add
+  defaults:
+    _form: '\Drupal\hoteles\Form\HotelesAddForm'
+    _title: 'Añadir Hotel'
+  requirements:
+    _permission: 'hoteles add'
+
+hotelesAdd2:
+  path: /hoteles/add2
+  defaults:
+    _controller: Drupal\hoteles\Controller\HotelesController::add
+    _title: 'Crear Hoteles'
+  requirements:
+    _permission: 'hoteles add'
+
+#hotelesSave:
+#  path: /hoteles/save
+#  defaults:
+#    _controller: Drupal\hoteles\Controller\hotelesController::save
+#  requirements:
+#    _permission: 'hoteles add'
+
+
+hotelesDelete:
+  path: '/hoteles/delete/{id}'
+  defaults:
+    _form: 'Drupal\hoteles\Form\HotelesDeleteForm'
+    _title: 'Eliminar Hoteles'
+  requirements: 
+    _permission: 'hoteles delete'
+
+hotelesUpdate:
+  path: '/hoteles/update/{id}'
+  defaults:
+    _form: 'Drupal\hoteles\Form\HotelesUpdateForm'
+    _title: 'Modificar Hoteles'
+  requirements:
+    _permission: 'hoteles update'

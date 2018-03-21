@@ -1,0 +1,18 @@
+<?php
+function conferencias_theme($existing, $type, $theme, $path) {
+    $path = drupal_get_path('module', 'conferencias');
+    return array(
+        'conferencias_list' => array(
+            'variables' => array('tabla_lista' => NULL, 'new_conferencias'=>NULL),
+            'path'=> $path . '/theme',
+        ),
+        /*'faq_list2' => array(
+            'variables' => array('tabla_lista' => NULL, 'new_faq'=>NULL),
+            'path'=> $path . '/theme',
+        ),*/
+        'conferencias-add' => array(
+            'variables' => array('algomas' => NULL),
+            'path'=> $path . '/theme',
+        ),
+    );
+}

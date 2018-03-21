@@ -1,0 +1,55 @@
+blogList:
+  path: /blog/list
+  defaults:
+      _controller: Drupal\blog\Controller\BlogController::lista
+  requirements:
+      _permission: 'blog read'
+      #_user_is_logged_in: 'FALSE'
+
+blogList2:
+  path: /blog/list2
+  defaults:
+      _controller: Drupal\blog\Controller\BlogController::lista2
+  requirements:
+      _permission: 'blog read'
+      #_user_is_logged_in: 'FALSE'
+
+blogAdd:
+  path: /blog/add
+  defaults:
+    _form: '\Drupal\blog\Form\BlogAddForm'
+    _title: 'Crear pregunta'
+  requirements:
+    _permission: 'blog add'
+
+blogAdd2:
+  path: /blog/add2
+  defaults:
+    _controller: Drupal\blog\Controller\BlogController::add
+    _title: 'Crear Blog'
+  requirements:
+    _permission: 'blog add'
+
+#blogSave:
+#  path: /blog/save
+#  defaults:
+#    _controller: Drupal\blog\Controller\blogController::save
+#  requirements:
+#    _permission: 'blog add'
+
+
+blogDelete:
+  path: '/blog/delete/{id}'
+  defaults:
+    _form: 'Drupal\blog\Form\BlogDeleteForm'
+    _title: 'Eliminar Blog'
+  requirements: 
+    _permission: 'blog delete'
+
+blogUpdate:
+  path: '/blog/update/{id}'
+  defaults:
+    _form: 'Drupal\blog\Form\BlogUpdateForm'
+    _title: 'Modificar Blog'
+  requirements:
+    _permission: 'blog update'

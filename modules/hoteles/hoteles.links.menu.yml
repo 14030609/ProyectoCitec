@@ -1,0 +1,13 @@
+hoteles.list:
+  title: HOTELES
+  description: 'HOTELES List'
+  parent: main
+  route_name: hotelesList
+  menu_name: main 
+
+#faq.admin:
+#  title: FAQ
+#  description: 'FAQ admin'
+#  parent: account
+#  route_name: faqList
+#  menu_name: account 

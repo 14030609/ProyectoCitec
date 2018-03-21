@@ -1,0 +1,18 @@
+<?php
+function blog_theme($existing, $type, $theme, $path) {
+  $path = drupal_get_path('module', 'blog');
+  return array(
+    'blog_list' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_blog'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'blog_list2' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_blog'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'blog-add' => array(
+      'variables' => array('algomas' => NULL),
+      'path'=> $path . '/theme',
+    ),
+  );
+}

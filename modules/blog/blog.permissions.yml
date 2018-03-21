@@ -1,0 +1,19 @@
+blog read:
+    title: 'Leer BLOG'
+    description: 'Lectura de BLOG'
+    restrict access: false
+
+blog add:
+    title: 'Agregar BLOG'
+    description: 'Agregar nuevos BLOG'
+    restrict access: true
+
+blog update:
+    title: 'Actualizar BLOG'
+    description: 'Actualiza BLOG'
+    restrict access: true
+
+blog delete:
+    title: 'Elimina BLOG'
+    description: 'Eliminar BLOG'
+    restrict access: true

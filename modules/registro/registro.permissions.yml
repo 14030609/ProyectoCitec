@@ -1,0 +1,19 @@
+registro read:
+  title: 'Leer REGISTRO'
+  description: 'Lectura de Registro'
+  restrict access: false
+
+registro add:
+  title: 'Agregar REGISTRO'
+  description: 'Agregar nuevos Registros'
+  restrict access: false
+
+registro update:
+  title: 'Actualizar REGISTRO'
+  description: 'Actualiza Registros'
+  restrict access: true
+
+registro delete:
+  title: 'Eliminar REGISTRO'
+  description: 'Eliminar Registro'
+  restrict access: true

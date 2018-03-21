@@ -1,0 +1,13 @@
+talleres.list:
+  title: TALLERES
+  description: 'TALLERES List'
+  parent: main
+  route_name: talleresList
+  menu_name: main 
+
+#faq.admin:
+#  title: FAQ
+#  description: 'FAQ admin'
+#  parent: account
+#  route_name: faqList
+#  menu_name: account 

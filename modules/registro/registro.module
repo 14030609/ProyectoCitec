@@ -1,0 +1,14 @@
+<?php
+function registro_theme($existing, $type, $theme, $path) {
+    $path = drupal_get_path('module', 'registro');
+    return array(
+        'registro-list' => array(
+            'variables' => array('registro_list_table' => NULL, 'new_registro'=>NULL, 'is_admin_registro'=> null),
+            'path'=> $path . '/theme',
+        ),
+        'registro-add' => array(
+            'variables' => array('registro_list_table' => NULL, 'new_registro'=> NULL),
+            'path'=> $path.'/theme',
+        ),
+    );
+}

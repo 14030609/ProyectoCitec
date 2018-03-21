@@ -1,0 +1,18 @@
+<?php
+function talleres_theme($existing, $type, $theme, $path) {
+  $path = drupal_get_path('module', 'talleres');
+  return array(
+    'talleres_list' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_talleres'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'talleres_list2' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_talleres'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'talleres-add' => array(
+      'variables' => array('algomas' => NULL),
+      'path'=> $path . '/theme',
+    ),
+  );
+}

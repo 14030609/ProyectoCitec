@@ -1,0 +1,55 @@
+talleresList:
+  path: /talleres/list
+  defaults:
+      _controller: Drupal\talleres\Controller\TalleresController::lista
+  requirements:
+      _permission: 'talleres read'
+      #_user_is_logged_in: 'FALSE'
+
+talleresList2:
+  path: /talleres/list2
+  defaults:
+      _controller: Drupal\talleres\Controller\TalleresController::lista2
+  requirements:
+      _permission: 'talleres read'
+      #_user_is_logged_in: 'FALSE'
+
+talleresAdd:
+  path: /talleres/add
+  defaults:
+    _form: '\Drupal\talleres\Form\TalleresAddForm'
+    _title: 'Crear taller'
+  requirements:
+    _permission: 'talleres add'
+
+talleresAdd2:
+  path: /talleres/add2
+  defaults:
+    _controller: Drupal\talleres\Controller\TalleresController::add
+    _title: 'Crear taller'
+  requirements:
+    _permission: 'talleres add'
+
+#faqSave:
+#  path: /faq/save
+#  defaults:
+#    _controller: Drupal\faq\Controller\FaqController::save
+#  requirements:
+#    _permission: 'faq add'
+
+
+talleresDelete:
+  path: '/talleres/delete/{id}'
+  defaults:
+    _form: 'Drupal\talleres\Form\TalleresDeleteForm'
+    _title: 'Eliminar taller'
+  requirements: 
+    _permission: 'talleres delete'
+
+talleresUpdate:
+  path: '/talleres/update/{id}'
+  defaults:
+    _form: 'Drupal\talleres\Form\TalleresUpdateForm'
+    _title: 'Modificar taller'
+  requirements:
+    _permission: 'talleres update'

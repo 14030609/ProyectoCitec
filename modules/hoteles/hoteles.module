@@ -1,0 +1,18 @@
+<?php
+function hoteles_theme($existing, $type, $theme, $path) {
+  $path = drupal_get_path('module', 'hoteles');
+  return array(
+    'hoteles_list' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_hoteles'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'hoteles_list2' => array(
+      'variables' => array('tabla_lista' => NULL, 'new_hoteles'=>NULL),
+      'path'=> $path . '/theme',
+    ),
+    'hoteles-add' => array(
+      'variables' => array('algomas' => NULL),
+      'path'=> $path . '/theme',
+    ),
+  );
+}

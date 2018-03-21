@@ -1,0 +1,38 @@
+<!-- -->
+<center>
+    <h1>
+        Registro Participantes
+    </h1>
+</center>
+<table class='table table-striped'>
+    <tr>
+        <th style="text:center">Nombre</th>
+        <th th style="text:center">Apellido Paterno</th>
+        {% if is_admin_registro %}
+        <th th style="text:center">Apellido Materno</th>
+        {% endif %}
+        <th th style="text:center">Tipo Participante </th>
+        {% if is_admin_registro %}
+        <th th style="text:center">Detalles</th>
+        <th th style="text:center">Editar</th>
+        <th th style="text:center">Eliminar</th>
+        {% endif %}
+    </tr>
+    {% for row in registro_list_table %}
+        <tr>
+            <td>{{ row.nombre }} </td>
+            <td>{{ row.apaterno}}</td>
+            {% if is_admin_registro %}
+            <td>{{ row.amaterno}}</td>
+            {% endif %}
+            <td>{{ row.tipo_participante}}</td>
+            {% if is_admin_registro %}
+            <td><a href="{{ path('registroRead',{'id':row.id}) }}">Detalles</a></td>
+            <td><a href="{{ path('registroUpdate',{'id':row.id}) }}">Actualizar</a></td>
+            <td><a href="{{ path('registroDelete',{'id':row.id}) }}">Eliminar</a></td>
+            {% endif %}
+        </tr>
+    {% endfor %}
+</table>
+
+<br/><a class='btn btn-primary' href="{{path('registroAdd')}}">Registrar</a><br/>

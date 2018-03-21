@@ -1,0 +1,19 @@
+talleres read:
+    title: 'Leer TALLERES'
+    description: 'Lectura de TALLERES'
+    restrict access: false
+
+talleres add:
+    title: 'Agregar TALLERES'
+    description: 'Agregar nuevos TALLERES'
+    restrict access: true
+
+talleres update:
+    title: 'Actualizar TALLERES'
+    description: 'Actualiza TALLERES'
+    restrict access: true
+
+talleres delete:
+    title: 'Elimina TALLERES'
+    description: 'Eliminar TALLERES'
+    restrict access: true

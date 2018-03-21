@@ -1,0 +1,28 @@
+Listado
+
+<div class="container">
+    <div class="panel-group col-md-9" id="talleresAccordion">
+    {% for row in tabla_lista %}
+        <div class="panel panel-default">
+            <div class="panel-heading accordion-toggle question-toggle collapsed" data-toggle="collapse" data-parent="#talleresAccordion" data-target="#question{{ loop.index }}">
+                 <h4 class="panel-title">
+                    <a href="#" class="ing">Q: {{row.taller}}</a>
+              	</h4>
+            </div>
+            <div id="presenta{{ loop.index }}" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-primary">Presenta</span></h5>
+                    <p>{{row.presenta}}</p>
+                </div>
+            </div>
+            <div id="descripcion{{ loop.index }}" class="panel-collapse collapse" style="height: 0px;">
+                <div class="panel-body">
+                    <h5><span class="label label-primary">descripcion</span></h5>
+                    <p>{{row.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+    <!--/panel-group-->
+</div>

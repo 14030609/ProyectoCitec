@@ -1,0 +1,19 @@
+hoteles read:
+    title: 'Leer HOTELES'
+    description: 'Lectura de HOTELES'
+    restrict access: false
+
+hoteles add:
+    title: 'Agregar HOTELES'
+    description: 'Agregar nuevos HOTELES'
+    restrict access: true
+
+hoteles update:
+    title: 'Actualizar HOTELES'
+    description: 'Actualiza HOTELES'
+    restrict access: true
+
+hoteles delete:
+    title: 'Elimina HOTELES'
+    description: 'Eliminar HOTELES'
+    restrict access: true

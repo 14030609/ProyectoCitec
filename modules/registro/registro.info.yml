@@ -1,0 +1,5 @@
+name: registro
+type: module
+description: Registro de participantes
+package: Custom
+core: 8.x
